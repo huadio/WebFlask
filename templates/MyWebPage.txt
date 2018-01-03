@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Webpage</title>
+</head>
+<body>
+    <ul id="navigation">
+    <h3>ID={{ id }}</h3>
+    <h3>NAME={{ name }}</h3>
+    <h3>AGE={{ age }}</h3>
+    {#{% if len({{name}}) %}#}
+        {% for item in navigations: %}
+            <li><a href="{{ item['href'] }}">{{item.href}}</a></li>
+        {% endfor %}
+    {#{%endif%}#}
+    </ul>
+
+    <h1>{{ name }}Webpage</h1>
+    
+    <ul>
+        {% for href, caption in [('logout', 'logout'),
+                        ('about.html', 'About')]:%}
+        <li><a href="{{ href }}">{{ caption }}</a></li>
+        {% endfor %}
+    </ul>
+    
+    {# {{ a_variable }}#}
+
+    {# a comment #}
+</body>
+</html>
